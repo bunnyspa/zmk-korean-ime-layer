@@ -1,0 +1,20 @@
+description: |
+  Korean IME-driven layer switcher.
+
+  Activates one of two configured layers based on Raw HID packets reporting
+  the host's Korean IME state. When the host reports no Korean IME on the
+  foreground window, both layers are deactivated and ZMK's always-active
+  layer 0 takes over.
+
+compatible: "zmk,korean-ime-layer"
+
+properties:
+  korean-layer:
+    type: int
+    required: true
+    description: Layer index to activate when the host IME is in 한글 mode.
+
+  english-layer:
+    type: int
+    required: true
+    description: Layer index to activate when the host IME is in 영문 mode.

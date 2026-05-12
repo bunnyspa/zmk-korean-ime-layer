@@ -1,0 +1,11 @@
+config ZMK_KOREAN_IME_LAYER
+    bool "Enable Korean IME-driven layer switching"
+    depends on RAW_HID
+    default n
+    help
+      Listens for Raw HID packets (marker 0xD5) reporting the Korean
+      IME state from a host application and switches between two
+      configured layers accordingly.
+
+      Pair with korean-ime-reporter-windows (or any host app that
+      speaks the same protocol) running on the connected PC.

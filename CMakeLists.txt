@@ -1,0 +1,5 @@
+if(CONFIG_ZMK_KOREAN_IME_LAYER)
+    zephyr_library()
+    zephyr_library_sources(src/korean_ime_layer.c)
+    zephyr_include_directories(include)
+endif()
